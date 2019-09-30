@@ -1,14 +1,13 @@
 from typing import List, Tuple
 
-import keras.backend as K
-import keras.layers
-from keras import optimizers
-from keras.engine.topology import Layer
-from keras.layers import Activation, Lambda
-from keras.layers import Conv1D, SpatialDropout1D
-from keras.layers import Dense, BatchNormalization
-from keras.models import Input, Model
-
+import tensorflow.keras.backend as K
+import tensorflow.keras.layers
+from tensorflow.keras import optimizers
+from tensorflow.keras.layers import Activation, Lambda, Layer
+from tensorflow.keras.layers import Conv1D, SpatialDropout1D
+from tensorflow.keras.layers import Dense, BatchNormalization, Input
+from tensorflow.keras.models import Model
+from tensorflow import keras
 
 def residual_block(x, training, dilation_rate, nb_filters, kernel_size, padding, activation='relu', dropout_rate=0,
                    kernel_initializer='he_normal', use_batch_norm=False):
